@@ -48,10 +48,10 @@ def load_libraries(config: Config, definition: Definition, c_program: str, link_
     bundle_files += glob.glob('/src/libs/**/*.dylib', recursive=True)
     
     # Load aolib from /opt/aolibc/
-    if(config.target == 64):
-        bundle_files += glob.glob('/opt/aolibc/aolibc.a', recursive=True)
-    else:
-        bundle_files += glob.glob('/opt/aolibc/aolibc32.a', recursive=True)
+    # if(config.target == 64):
+    #     bundle_files += glob.glob('/opt/aolibc/aolibc.a', recursive=True)
+    # else:
+    #     bundle_files += glob.glob('/opt/aolibc/aolibc32.a', recursive=True)
     
     bundle_files += glob.glob('/src/libs/**/*.lua', recursive=True)
     # bundle_files += glob.glob(local_include_dir + '/**/*.so', recursive=True)

@@ -4,6 +4,8 @@
 
 #include <emscripten.h>
 
+#define LUAI_THROW(L,c) return 0;  // 改为返回式错误处理
+
 #ifdef __cplusplus
 #include "lua.hpp"
 #else
