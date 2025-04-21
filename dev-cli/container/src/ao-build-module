@@ -146,7 +146,7 @@ def main():
     cmd.extend(config.get_extra_args())
 
     # Export the main function and malloc for the runtime
-    cmd.extend(['-s', 'EXPORTED_FUNCTIONS=["_malloc", "_main", "_lib_main"]'])
+    cmd.extend(['-s', 'EXPORTED_FUNCTIONS=["_malloc", "_main", "_handle"]'])
 
     # Export the runtime methods cwrap
     cmd.extend(['-lm', '-ldl', '-o', definition.get_output_file(), '-s', 'EXPORTED_RUNTIME_METHODS=["cwrap"]'])
